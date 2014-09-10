@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Re-mail: SEM1 Web Application</title>
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+ul.MenuBarVertical
+{
+	margin: 0 auto ;
+	width: 8em;
+}
+</style>
+
+<ul id="MenuBar1" class="MenuBarHorizontal">
+  <li><a class="MenuBarItemSubmenu" href="#">Home</a>
+   
+  </li>
+  <li><a href="#">Remind Me</a></li>
+  <li><a class="MenuBarItemSubmenu" href="#">Consort</a>
+    
+  </li>
+  <li><a href="#">How-To</a></li>
+</ul>
+
+</head>
+
+<body>
+
+
+<br>
+<br>
+
+<div style="opacity:0.5;position:absolute;left:10px;width:500px;height:350px;background-color:#40B3DF">
+
+<!-- <ul id="nav">
+<li><a href="#">Home</a></li>
+<li><a href="#">Remind Me</a></li>
+<li><a href="#">Consort</a></li>
+<li><a href="#">How-to</a></li>
+</ul> -->
+
+<br>
+<div id="remindyourself" class="formdiv">
+    <form action="newtask" onsubmit="return checkNewTask('task', event)" method="post">
+    <label class="mainformlabel" for="task">REMIND ME TO</label>
+    <input name="task" tabindex="1" type="text" class="formtext" value="" id="task">
+    <div class="remark">
+    Type in reminder
+    </div>
+    <p>Remind me every
+      <select tabindex="2" onChange="onChangeFreq(event)" id="selectfreq" name="frequency">
+        <option selected value="daily">day</option>
+        <option value="weekly">week</option>
+        <option value="monthly">month</option>
+        <option value="yearly">year</option>
+      </select>
+    <!-- <div class="datebox">
+        starting on <span class="weekdayspan"></span>, <a href="#" class="datespan" onclick="return changeNextreminder(event)"></a> <span class="morningspan">morning</span>
+        <input type="hidden" name="nextreminder" value="">
+    </div> -->
+    <div>
+    <input name="shareonfacebook" onclick="onChangeFacebookCB(event)" tabindex="3" type="checkbox" class="facebookcb" id="facebook">
+    <label class="facebooklabel" for="facebook">Share on <a href = "http://www.facebook.com">Facebook</a>
+
+    <!-- <span id="suggestfacebook" class="nofbuid"> 
+    <a href="http://www.facebook.com/add.php?api_key=34c8a42dddd9617dab5b5e1fb3358c27">add the Facebook application</a></span> -->
+    </label>
+    </p>
+    <!-- <div> -->
+    <p>
+    <input name="shareontwitter" onclick="onChangeTwitterCB(event)" tabindex="3" type="checkbox" class="twittercb" id="twitter">
+    <label class="twitterlabel" for="twitter">Tweet on <a href = "http://www.twitter.com">Twitter</a>
+	</label>
+    </div>
+    </p>
+    
+    <!-- <p class="showadvanced"><a href="#" onclick="return showAdvanced(event)">Advanced settings</a></p>
+    <div class="advanced">
+        <hr>
+        <div class="selecttime">
+            <label for="advancedtime">Reminder time: </label><input tabindex="4" type="text" id="advancedtime" value="05:00" name="remindertime"> <em>HH:MM</em> or <em>HHMM</em> (24h)
+        </div>
+        <div class="customfreq">
+            <label id="customfreqlbl" for="customfreqcb">
+            <input tabindex="5" type="checkbox" id="customfreqcb" onclick="return customFreqSelect(event)" name="customfreq">
+            Custom frequency:</label> <select disabled name="cftimes" tabindex="6" onchange="onChangeFreqTimes(event)" id="cftimes" class="disabled">
+                <option value="1">1</option>
+                <option selected value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select>
+            <select disabled name="cffreq" tabindex="7" onchange="onChangeAdvancedFreq(event)" id="cffreq" class="disabled">
+                <option value="daily">days</option>
+                <option selected value="weekly">weeks</option>
+                <option value="monthly">months</option>
+        </select>
+        </div>
+        <label id="rightnow" for="rightnowcb">
+        <input tabindex="8" type="checkbox" id="rightnowcb" name="rightnow">
+        check to get one reminder right now
+        </label>
+        <textarea tabindex="9" rows="2" id="advancednote" name="note">Additional text (optional)</textarea>
+        <hr>
+    </div> -->
+    
+    
+    <div id="sendto" class="formdiv">
+    <form action="newtask" onsubmit="return checkNewTask('task', event)" method="post">
+      <label class="mainformlabel" for="task">SEND TO</label>
+    <input name="task" tabindex="1" type="text" class="formtext" value="" id="task">
+    <div class="rightalign">
+      <input type="submit" class="formsubmit" value="SEND" tabindex="10">
+    </div>
+    </form>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+</body>
+</html>
